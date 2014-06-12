@@ -3,7 +3,7 @@
 		<a href="{if !$universalpay_onepage}{$this_path_ssl}payment.php?id_universalpay_system={$ps.id_universalpay_system}{else}#{/if}" title="{$ps.name}" class="universalpay">
 			<table>
       <tr>
-      <td style="width:45px;">
+      <td style="width:45px; padding-top: 4px;">
         
         <img src="http://prsteny-prstynky.cz/img/kolecko.png" />
         
