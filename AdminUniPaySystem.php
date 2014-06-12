@@ -32,7 +32,7 @@ class AdminUniPaySystem extends AdminTab
 		if (!($obj = $this->loadObject(true)))
 			return;
 
-		$divLangName = 'nameÂ¤cdescriptionÂ¤cdescription_shortÂ¤cdescription_success';
+		$divLangName = 'name¤cdescription¤cdescription_short¤cdescription_success';
 
 		echo '
 		<form action="'.$currentIndex.'&submitAdd'.$this->table.'=1&token='.$this->token.'" method="post" enctype="multipart/form-data">
@@ -63,7 +63,7 @@ class AdminUniPaySystem extends AdminTab
 				<div class="margin-form">';
 		foreach ($this->_languages as $language)
 			echo '	<div id="cdescription_short_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $this->_defaultFormLanguage ? 'block' : 'none').';float: left;">
-						<textarea class="" cols="100" rows="10" id="description_short_'.$language['id_lang'].'" name="description_short_'.$language['id_lang'].'">'.htmlentities(stripslashes($this->getFieldValue($obj, 'description_short', $language['id_lang'])), ENT_COMPAT, 'UTF-8').'</textarea>
+						<textarea class="rte" cols="100" rows="10" id="description_short_'.$language['id_lang'].'" name="description_short_'.$language['id_lang'].'">'.htmlentities(stripslashes($this->getFieldValue($obj, 'description_short', $language['id_lang'])), ENT_COMPAT, 'UTF-8').'</textarea>
 					</div>';
 		$this->displayFlags($this->_languages, $this->_defaultFormLanguage, $divLangName, 'cdescription_short');
 		echo '<div class="clear">'.$this->l('Displayed in payment selection page.').'</div></div>';
