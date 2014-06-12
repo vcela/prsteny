@@ -20,7 +20,7 @@ class UniPaySystem extends ObjectModel
 	protected 	$fieldsValidate = array('active' => 'isBool', 'id_order_state' => 'isUnsignedId');
 	protected 	$fieldsRequiredLang = array('name', 'description_short');
 	protected 	$fieldsSizeLang = array('name' => 128, 'description_short' => 255);
-	protected 	$fieldsValidateLang = array('name' => 'isCatalogName', 'description_short' => 'isCatalogName', 'description' => 'isCleanHtml', 'description_success' => 'isCleanHtml');
+	protected 	$fieldsValidateLang = array('name' => 'isCatalogName', 'description_short' => 'isCleanHtml', 'description' => 'isCleanHtml', 'description_success' => 'isCleanHtml');
 
 	protected 	$table = 'universalpay_system';
 	protected 	$identifier = 'id_universalpay_system';
